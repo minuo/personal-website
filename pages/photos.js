@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Masonry from "react-masonry-css";
 import Head from "next/head";
+import Image from 'next/image'
+
 import {
   search,
   mapImageResources,
@@ -139,11 +141,16 @@ const Photos = ({
               className="mb-16 bg-grey-200 shadow-[inset_0_-8px_0_0_white]"
               key={image?.assetId}
             >
-              <img
-                src={imageUrl}
+              // <img
+              //   src={imageUrl}
+              //   alt={image?.publicId || "photo"}
+              //   width="800"
+              // />
+                  <Image
+      src={imageUrl}
                 alt={image?.publicId || "photo"}
                 width="800"
-              />
+    />
               {/* <CldImage
                 width="800"
                 height="800"
